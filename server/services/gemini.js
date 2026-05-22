@@ -9,3 +9,5 @@ import {
   isRetryableGeminiError,
   sleep,
 } from './geminiRetry.js';
+
+const MAX_RETRIES = 2;
