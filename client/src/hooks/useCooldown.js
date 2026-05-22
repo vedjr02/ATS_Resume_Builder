@@ -14,3 +14,7 @@ export function useCooldown() {
     return () => clearInterval(timer);
   }, [cooldownSec]);
 
+  const startCooldown = () => setCooldownSec(RATE_LIMIT_COOLDOWN_SECONDS);
+
+  return { cooldownSec, startCooldown, isCoolingDown: cooldownSec > 0 };
+}
