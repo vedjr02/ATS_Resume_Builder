@@ -10,3 +10,13 @@ export function getErrorStatus(error) {
   return match ? Number(match[1]) : null;
 }
 
+export function isRateLimitError(error) {
+  const status = getErrorStatus(error);
+  if (status === 429) return true;
+
+  const message = String(error?.message || '').toLowerCase();
+  return message.includes('rate limit') || message.includes('resource exhausted');
+}
+
+export function isRetryableGeminiError(error) {
+  if (isRateLimitError(error)) return false;
