@@ -32,3 +32,15 @@ export function isRetryableGeminiError(error) {
   );
 }
 
+export function isFatalGeminiError(error) {
+  const status = getErrorStatus(error);
+  return status === 403 || status === 401 || status === 400;
+}
+
+export function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export function getActiveModel() {
+  return process.env.GEMINI_MODEL?.trim() || DEFAULT_GEMINI_MODEL;
+}
