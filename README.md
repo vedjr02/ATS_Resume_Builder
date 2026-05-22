@@ -68,7 +68,42 @@ A full-stack web application that takes a **Job Description** and **Current Resu
 
    The Express server serves the built React app and the API on the same port.
 
-## API
+## Deploy to Vercel
+
+This project is configured for [Vercel](https://vercel.com) out of the box.
+
+### Before you deploy
+
+1. **Push the repo to GitHub** — already at `vedjr02/ATS_Resume_Builder`.
+2. **Import the project in Vercel** — [vercel.com/new](https://vercel.com/new) → import the GitHub repo.
+3. **Add environment variables** in Vercel → Project → Settings → Environment Variables:
+
+   | Variable | Required |
+   |----------|----------|
+   | `GEMINI_API_KEY` | Yes |
+   | `OVERLEAF_SESSION_COOKIE` | Yes |
+   | `OVERLEAF_GCLB_TOKEN` | Yes |
+   | `GEMINI_MODEL` | No |
+
+4. **Use Vercel Pro (recommended)** — resume generation calls Gemini + Overleaf and can take 30–90 seconds. The Hobby plan has a **10s function timeout** which will fail. This project sets `maxDuration: 300` in `vercel.json` (requires Pro).
+5. **Refresh Overleaf cookies** periodically — expired cookies break PDF compilation in production too.
+
+### Deploy
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or connect GitHub in the Vercel dashboard for automatic deploys on every push.
+
+### How it works on Vercel
+
+- **Frontend:** static build from `client/dist`
+- **API:** Express app served via `api/index.js` serverless function
+- **Routes:** `/api/*` → serverless function, everything else → React SPA
+
+No separate backend URL needed — the frontend calls `/api/generate` on the same domain.
 
 ### `POST /api/generate`
 
