@@ -20,3 +20,15 @@ export function isRateLimitError(error) {
 
 export function isRetryableGeminiError(error) {
   if (isRateLimitError(error)) return false;
+
+  const status = getErrorStatus(error);
+  if ([500, 502, 503, 504].includes(status)) return true;
+
+  const message = String(error?.message || '').toLowerCase();
+  return (
+    message.includes('high demand') ||
+    message.includes('unavailable') ||
+    message.includes('overloaded')
+  );
+}
+
