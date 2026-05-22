@@ -282,3 +282,10 @@ export default function App() {
               <p className="mt-4 text-sm text-amber-300/90">
                 Gemini rate limit reached. Please wait {cooldownSec}s before trying again.
               </p>
+            )}
+
+            {loading && (
+              <div className="mt-6 w-full max-w-md space-y-2">
+                {STATUS_STEPS.map((step, index) => {
+                  const stepNum = index + 1;
+                  const isActive = statusStep === stepNum;
