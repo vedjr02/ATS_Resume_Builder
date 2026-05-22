@@ -50,3 +50,7 @@ async function callGemini(prompt, maxOutputTokens) {
       lastError = error;
 
       if (isFatalGeminiError(error) || isRateLimitError(error)) {
+        throw formatGeminiError(error);
+      }
+
+      if (isRetryableGeminiError(error) && attempt < MAX_RETRIES) {
