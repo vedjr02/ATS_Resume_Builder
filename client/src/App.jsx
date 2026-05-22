@@ -273,3 +273,12 @@ export default function App() {
               {loading && <Spinner />}
               {loading
                 ? 'Generating…'
+                : isCoolingDown
+                  ? `Wait ${cooldownSec}s…`
+                  : 'Generate ATS Resume'}
+            </button>
+
+            {isCoolingDown && !loading && (
+              <p className="mt-4 text-sm text-amber-300/90">
+                Gemini rate limit reached. Please wait {cooldownSec}s before trying again.
+              </p>
