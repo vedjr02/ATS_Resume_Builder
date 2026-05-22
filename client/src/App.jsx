@@ -119,3 +119,6 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const { cooldownSec, startCooldown, isCoolingDown } = useCooldown();
+
+  const isValid = jobDescription.trim().length > 0 && currentResume.trim().length > 0;
+  const isGenerateDisabled = !isValid || loading || isCoolingDown;
