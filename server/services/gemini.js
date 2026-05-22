@@ -39,3 +39,14 @@ async function callGeminiWithModel(modelName, prompt, maxOutputTokens) {
   return text;
 }
 
+async function callGemini(prompt, maxOutputTokens) {
+  const modelName = getActiveModel();
+  let lastError = null;
+
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      return await callGeminiWithModel(modelName, prompt, maxOutputTokens);
+    } catch (error) {
+      lastError = error;
+
+      if (isFatalGeminiError(error) || isRateLimitError(error)) {
