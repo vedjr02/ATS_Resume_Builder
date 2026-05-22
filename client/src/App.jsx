@@ -122,3 +122,6 @@ export default function App() {
 
   const isValid = jobDescription.trim().length > 0 && currentResume.trim().length > 0;
   const isGenerateDisabled = !isValid || loading || isCoolingDown;
+
+  const handleGenerate = async () => {
+    if (!isValid || loading || isCoolingDown) return;
