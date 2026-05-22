@@ -3,7 +3,7 @@ import { useState } from 'react';
 const STATUS_STEPS = [
   'Analyzing job description…',
   'Rewriting resume with Gemini…',
-  'Converting to LaTeX…',
+  'Building LaTeX from template…',
   'Compiling PDF on Overleaf…',
   'Done!',
 ];
