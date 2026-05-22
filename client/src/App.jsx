@@ -358,3 +358,17 @@ export default function App() {
             )}
           </div>
         </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-surface-border py-8">
+        <div className="mx-auto max-w-6xl px-6 text-center text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} ATS Resume Tailor</p>
+          <p className="mt-1">
+            Your resume and JD are processed in-memory and never stored.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
