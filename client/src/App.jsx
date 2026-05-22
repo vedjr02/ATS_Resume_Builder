@@ -143,3 +143,10 @@ export default function App() {
         startCooldown();
       }
     } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleTryAgain = () => {
+    if (isCoolingDown) return;
+    setError(null);
