@@ -44,3 +44,31 @@ export function sleep(ms) {
 export function getActiveModel() {
   return process.env.GEMINI_MODEL?.trim() || DEFAULT_GEMINI_MODEL;
 }
+
+export function formatGeminiError(error) {
+  const status = getErrorStatus(error);
+
+  if (status === 403 || status === 401) {
+    return new Error(
+      'Gemini API key invalid or access denied. Check GEMINI_API_KEY in your environment settings.'
+    );
+  }
+
+  if (isRateLimitError(error)) {
+    return new Error(
+      'Gemini rate limit reached. Please wait 60 seconds before trying again.'
+    );
+  }
+
+  if (status === 503 || status === 502 || status === 504) {
+    return new Error(
+      'Gemini is temporarily overloaded. Please wait a few seconds and try again.'
+    );
+  }
+
+  if (error instanceof Error) {
+    return new Error(error.message.replace(/\[GoogleGenerativeAI Error\]:\s*/i, '').trim());
+  }
+
+  return new Error('Gemini request failed. Please try again.');
+}
