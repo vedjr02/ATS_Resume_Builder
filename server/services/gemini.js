@@ -11,3 +11,31 @@ import {
 } from './geminiRetry.js';
 
 const MAX_RETRIES = 2;
+
+function getClient() {
+  if (!process.env.GEMINI_API_KEY) {
+    throw new Error('Gemini API key not configured.');
+  }
+
+  return new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+}
+
+async function callGeminiWithModel(modelName, prompt, maxOutputTokens) {
+  const model = getClient().getGenerativeModel({
+    model: modelName,
+    generationConfig: {
+      maxOutputTokens,
+      responseMimeType: 'application/json',
+    },
+  });
+
+  const result = await model.generateContent(prompt);
+  const text = result.response.text()?.trim();
+
+  if (!text) {
+    throw new Error('Gemini returned an empty response.');
+  }
+
+  return text;
+}
+
