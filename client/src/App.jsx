@@ -125,3 +125,21 @@ export default function App() {
 
   const handleGenerate = async () => {
     if (!isValid || loading || isCoolingDown) return;
+
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    setStatusStep(0);
+
+    try {
+      const data = await generateResume(jobDescription, currentResume, (step) => {
+        setStatusStep(step);
+      });
+      setResult(data);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Something went wrong.';
+      setError(message);
+      if (isRateLimitMessage(message)) {
+        startCooldown();
+      }
+    } finally {
