@@ -64,3 +64,13 @@ async function callGemini(prompt, maxOutputTokens) {
 
   throw formatGeminiError(lastError);
 }
+
+export async function rewriteResume(jobDescription, currentResume) {
+  const prompt = buildResumeRewriterPrompt(jobDescription, currentResume);
+  const rawJson = await callGemini(prompt, 8192);
+  return parseResumeJson(rawJson);
+}
+
+export async function convertToLatex(resumeData) {
+  return buildResumeLatex(resumeData);
+}
