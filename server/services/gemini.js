@@ -54,3 +54,13 @@ async function callGemini(prompt, maxOutputTokens) {
       }
 
       if (isRetryableGeminiError(error) && attempt < MAX_RETRIES) {
+        await sleep(2000 * (attempt + 1));
+        continue;
+      }
+
+      break;
+    }
+  }
+
+  throw formatGeminiError(lastError);
+}
