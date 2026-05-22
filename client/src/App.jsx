@@ -150,3 +150,126 @@ export default function App() {
   const handleTryAgain = () => {
     if (isCoolingDown) return;
     setError(null);
+    setResult(null);
+    setStatusStep(0);
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* Sticky Nav */}
+      <nav className="sticky top-0 z-50 border-b border-surface-border bg-surface/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <span className="text-lg font-bold tracking-tight text-white">
+            ATS Resume Tailor
+          </span>
+          <button
+            onClick={scrollToForm}
+            className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-dark"
+          >
+            Generate Resume
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="gradient-orb absolute inset-0" />
+        <div className="grid-bg absolute inset-0 opacity-60" />
+        <div className="relative mx-auto max-w-4xl px-6 py-24 text-center sm:py-32">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+            Beat the ATS.{' '}
+            <span className="bg-gradient-to-r from-accent-light to-violet-400 bg-clip-text text-transparent">
+              Land the interview.
+            </span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+            Paste your resume and a job description. Get a perfectly tailored,
+            keyword-optimized, recruiter-ready PDF in under a minute — powered by Gemini.
+          </p>
+          <button
+            onClick={scrollToForm}
+            className="mt-10 inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-dark hover:shadow-accent/40"
+          >
+            Tailor My Resume →
+          </button>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="border-y border-surface-border bg-surface-raised/50 py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="mb-10 text-center text-2xl font-bold text-white">How it works</h2>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              { step: '1', title: 'Paste your resume & the JD' },
+              { step: '2', title: 'Gemini rewrites & optimizes for ATS' },
+              { step: '3', title: 'Download your tailored PDF' },
+            ].map((card) => (
+              <div
+                key={card.step}
+                className="rounded-2xl border border-surface-border bg-surface p-6 transition hover:border-accent/40"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-sm font-bold text-accent-light">
+                  {card.step}
+                </div>
+                <p className="font-medium text-gray-200">{card.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Generator Form */}
+      <section id="generator" className="py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="mb-2 text-center text-3xl font-bold text-white">
+            Generate your tailored resume
+          </h2>
+          <p className="mb-10 text-center text-gray-400">
+            Fill in both fields below to get started.
+          </p>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div>
+              <label
+                htmlFor="job-description"
+                className="mb-2 block text-sm font-medium text-gray-300"
+              >
+                Job Description
+              </label>
+              <textarea
+                id="job-description"
+                value={jobDescription}
+                onChange={(e) => setJobDescription(e.target.value)}
+                placeholder="Paste the full job description here…"
+                className="min-h-[320px] w-full resize-y rounded-xl border border-surface-border bg-surface-raised p-4 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-accent focus:ring-1 focus:ring-accent"
+                disabled={loading}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="current-resume"
+                className="mb-2 block text-sm font-medium text-gray-300"
+              >
+                Your Current Resume
+              </label>
+              <textarea
+                id="current-resume"
+                value={currentResume}
+                onChange={(e) => setCurrentResume(e.target.value)}
+                placeholder="Paste your current resume text here…"
+                className="min-h-[320px] w-full resize-y rounded-xl border border-surface-border bg-surface-raised p-4 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-accent focus:ring-1 focus:ring-accent"
+                disabled={loading}
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col items-center">
+            <button
+              onClick={handleGenerate}
+              disabled={isGenerateDisabled}
+              className="inline-flex min-w-[240px] items-center justify-center gap-3 rounded-xl bg-accent px-10 py-4 text-base font-semibold text-white shadow-lg shadow-accent/20 transition hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {loading && <Spinner />}
+              {loading
+                ? 'Generating…'
