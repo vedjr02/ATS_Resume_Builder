@@ -289,3 +289,72 @@ export default function App() {
                 {STATUS_STEPS.map((step, index) => {
                   const stepNum = index + 1;
                   const isActive = statusStep === stepNum;
+                  const isDone = statusStep > stepNum;
+                  const isPending = statusStep < stepNum;
+
+                  return (
+                    <div
+                      key={step}
+                      className={`flex items-center gap-3 rounded-lg px-4 py-2 text-sm transition ${
+                        isActive
+                          ? 'bg-accent/10 text-accent-light'
+                          : isDone
+                            ? 'text-green-400'
+                            : isPending
+                              ? 'text-gray-600'
+                              : 'text-gray-400'
+                      }`}
+                    >
+                      {isDone ? (
+                        <span className="text-green-400">✓</span>
+                      ) : isActive ? (
+                        <Spinner />
+                      ) : (
+                        <span className="h-5 w-5 rounded-full border border-gray-600" />
+                      )}
+                      {step}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {result && !loading && (
+              <div className="mt-8 w-full max-w-lg rounded-2xl border border-green-500/30 bg-green-500/10 p-6 text-center">
+                <p className="mb-4 text-lg font-semibold text-green-300">
+                  ✅ Your tailored resume is ready.
+                </p>
+                <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                  <button
+                    onClick={() => downloadPdfFromBase64(result.pdfBase64)}
+                    className="rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-500"
+                  >
+                    Download PDF
+                  </button>
+                  <a
+                    href={result.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-green-300 underline underline-offset-4 transition hover:text-green-200"
+                  >
+                    Open project in Overleaf
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {error && !loading && (
+              <div className="mt-8 w-full max-w-lg rounded-2xl border border-red-500/30 bg-red-500/10 p-6 text-center">
+                <p className="mb-2 text-sm font-semibold text-red-300">Something went wrong</p>
+                <p className="mb-4 text-sm text-red-200/80">{error}</p>
+                <button
+                  onClick={handleTryAgain}
+                  disabled={isCoolingDown}
+                  className="rounded-lg border border-red-400/50 px-5 py-2 text-sm font-medium text-red-300 transition hover:bg-red-500/10 disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {isCoolingDown ? `Wait ${cooldownSec}s` : 'Try again'}
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
