@@ -1,6 +1,6 @@
 # ATS Resume Tailor
 
-A full-stack web application that takes a **Job Description** and **Current Resume**, uses Google Gemini to rewrite and optimize the resume for ATS systems, converts it to LaTeX, compiles a PDF via Overleaf, and returns a downloadable tailored resume.
+A full-stack web application that takes a **Job Description** and **Current Resume**, uses Google Gemini to rewrite and optimize the resume for ATS systems, fills a fixed professional LaTeX template, compiles a PDF via Overleaf, and returns a downloadable tailored resume.
 
 ## Tech Stack
 
@@ -96,8 +96,8 @@ A full-stack web application that takes a **Job Description** and **Current Resu
 
 ## Pipeline
 
-1. Gemini rewrites the resume for ATS optimization
-2. Gemini converts the markdown resume to LaTeX
+1. Gemini rewrites the resume as structured JSON tailored to the job description
+2. The fixed LaTeX resume template is filled programmatically (consistent layout every time)
 3. Overleaf CSRF token is fetched
 4. A new Overleaf project is created with the LaTeX
 5. The project is compiled to PDF
