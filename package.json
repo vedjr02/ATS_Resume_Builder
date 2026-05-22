@@ -9,6 +9,7 @@
     "dev:client": "npm run dev --prefix client",
     "build": "npm run build --prefix client",
     "start": "node server/index.js",
+    "vercel-build": "npm run build",
     "postinstall": "npm install --prefix client"
   },
   "dependencies": {
