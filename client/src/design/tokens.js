@@ -147,3 +147,5 @@ export const TOKEN_SELECTION_BRAND = 'selection';
 export const TOKEN_MASK_RADIAL = 'mask-radial';
 
 export const TOKEN_GRADIENT_CLIP = 'bg-clip-text';
+
+export const TOKEN_TEXT_TRANSPARENT = 'text-transparent';
