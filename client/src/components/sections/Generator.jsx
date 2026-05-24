@@ -52,7 +52,7 @@ export default function Generator() {
   };
 
   return (
-    <section id="generator" className="relative py-24 sm:py-32">
+    <section id="generator" className="relative py-24 sm:py-36">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="pointer-events-none absolute inset-x-0 top-1/2 h-96 -translate-y-1/2 bg-gradient-radial from-brand-500/5 via-transparent to-transparent" />
 
