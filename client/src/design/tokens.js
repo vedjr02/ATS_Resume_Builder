@@ -125,3 +125,5 @@ export const TOKEN_FLEX_CENTER = 'flex items-center justify-center';
 export const TOKEN_ABSOLUTE_INSET = 'absolute inset-0';
 
 export const TOKEN_POINTER_NONE = 'pointer-events-none';
+
+export const TOKEN_OVERFLOW_HIDDEN = 'overflow-hidden';
