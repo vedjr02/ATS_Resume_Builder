@@ -109,3 +109,5 @@ export const TOKEN_INSET_RING = 'ring-inset';
 export const TOKEN_GLOW_BRAND = 'shadow-glow';
 
 export const TOKEN_GLOW_LG = 'shadow-glow-lg';
+
+export const TOKEN_ANIM_FADE = 'animate-fade-up';
