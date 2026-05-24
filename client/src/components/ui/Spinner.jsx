@@ -1,7 +1,7 @@
 export default function Spinner({ className = 'h-5 w-5 text-white' }) {
   return (
     <svg className={`animate-spin ${className}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-20" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" />
+      <circle className="opacity-20" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2.5" />
       <path
         className="opacity-90"
         fill="currentColor"
