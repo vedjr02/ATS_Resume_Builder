@@ -81,3 +81,5 @@ export const TOKEN_MAX_W_PROSE = 'max-w-2xl';
 export const TOKEN_FONT_DISPLAY = 'font-display';
 
 export const TOKEN_FONT_BODY = 'font-sans';
+
+export const TOKEN_WEIGHT_SEMI = 'font-semibold';
