@@ -73,3 +73,5 @@ export const TOKEN_OPACITY_DISABLED = 'opacity-50';
 export const TOKEN_Z_NAV = 'z-50';
 
 export const TOKEN_Z_OVERLAY = 'z-40';
+
+export const TOKEN_MAX_W_CONTENT = 'max-w-7xl';
