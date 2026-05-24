@@ -25,7 +25,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`group relative inline-flex items-center justify-center gap-2.5 font-semibold transition-all duration-400 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`group relative inline-flex items-center justify-center gap-2.5 font-semibold transition-all duration-400 disabled:cursor-not-allowed disabled:opacity-40 active:scale-[0.98] disabled:shadow-none ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {loading && <Spinner className="h-4 w-4" />}
