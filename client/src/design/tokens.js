@@ -9,3 +9,5 @@ export const MOTION = {
   default: 'duration-300',
   slow: 'duration-500',
 };
+
+export const TOKEN_RADIUS_SM = 'rounded-xl';
