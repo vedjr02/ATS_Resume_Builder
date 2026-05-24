@@ -13,3 +13,5 @@ export const MOTION = {
 export const TOKEN_RADIUS_SM = 'rounded-xl';
 
 export const TOKEN_RADIUS_LG = 'rounded-2xl';
+
+export const TOKEN_RADIUS_XL = 'rounded-3xl';
