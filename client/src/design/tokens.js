@@ -79,3 +79,5 @@ export const TOKEN_MAX_W_CONTENT = 'max-w-7xl';
 export const TOKEN_MAX_W_PROSE = 'max-w-2xl';
 
 export const TOKEN_FONT_DISPLAY = 'font-display';
+
+export const TOKEN_FONT_BODY = 'font-sans';
