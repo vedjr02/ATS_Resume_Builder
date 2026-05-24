@@ -57,3 +57,5 @@ export const TOKEN_FOCUS_RING = 'ring-brand-500/20';
 export const TOKEN_GRADIENT_BRAND = 'from-brand-500';
 
 export const TOKEN_GRADIENT_VIOLET = 'to-violet-400';
+
+export const TOKEN_GRADIENT_MINT = 'from-mint-300';
