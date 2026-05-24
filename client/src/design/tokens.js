@@ -47,3 +47,5 @@ export const TOKEN_TRACKING_SECTION = 'tracking-widest';
 export const TOKEN_GAP_SECTION = 'gap-8';
 
 export const TOKEN_GAP_CARD = 'gap-6';
+
+export const TOKEN_PANEL_PADDING = 'p-8';
