@@ -55,3 +55,5 @@ export const TOKEN_INPUT_MIN_H = 'min-h-340px';
 export const TOKEN_FOCUS_RING = 'ring-brand-500/20';
 
 export const TOKEN_GRADIENT_BRAND = 'from-brand-500';
+
+export const TOKEN_GRADIENT_VIOLET = 'to-violet-400';
