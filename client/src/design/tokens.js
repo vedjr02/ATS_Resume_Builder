@@ -19,3 +19,5 @@ export const TOKEN_RADIUS_XL = 'rounded-3xl';
 export const TOKEN_BLUR_SM = 'backdrop-blur-sm';
 
 export const TOKEN_BLUR_MD = 'backdrop-blur-md';
+
+export const TOKEN_BLUR_XL = 'backdrop-blur-xl';
