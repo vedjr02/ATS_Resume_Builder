@@ -131,3 +131,5 @@ export const TOKEN_OVERFLOW_HIDDEN = 'overflow-hidden';
 export const TOKEN_TRANSITION_ALL = 'transition-all';
 
 export const TOKEN_HOVER_BRIGHT = 'brightness-110';
+
+export const TOKEN_TABULAR = 'tabular-nums';
