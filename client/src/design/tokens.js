@@ -51,3 +51,5 @@ export const TOKEN_GAP_CARD = 'gap-6';
 export const TOKEN_PANEL_PADDING = 'p-8';
 
 export const TOKEN_INPUT_MIN_H = 'min-h-340px';
+
+export const TOKEN_FOCUS_RING = 'ring-brand-500/20';
