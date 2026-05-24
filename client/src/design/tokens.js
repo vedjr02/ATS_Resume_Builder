@@ -115,3 +115,5 @@ export const TOKEN_ANIM_FADE = 'animate-fade-up';
 export const TOKEN_ANIM_SPIN = 'animate-spin';
 
 export const TOKEN_ANIM_FLOAT = 'animate-float';
+
+export const TOKEN_GRID_COLS_3 = 'grid-cols-3';
