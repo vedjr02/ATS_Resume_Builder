@@ -141,3 +141,5 @@ export const TOKEN_UNDERLINE_OFFSET = 'underline-offset-4';
 export const TOKEN_DECORATION_MUTED = 'decoration-white/20';
 
 export const TOKEN_SCROLL_SMOOTH = 'scroll-smooth';
+
+export const TOKEN_SELECTION_BRAND = 'selection';
