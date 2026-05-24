@@ -25,3 +25,5 @@ export const TOKEN_BLUR_XL = 'backdrop-blur-xl';
 export const TOKEN_BORDER_SUBTLE = 'border-white/6';
 
 export const TOKEN_BORDER_DEFAULT = 'border-white/8';
+
+export const TOKEN_BORDER_STRONG = 'border-white/12';
