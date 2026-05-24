@@ -27,3 +27,5 @@ export const TOKEN_BORDER_SUBTLE = 'border-white/6';
 export const TOKEN_BORDER_DEFAULT = 'border-white/8';
 
 export const TOKEN_BORDER_STRONG = 'border-white/12';
+
+export const TOKEN_TEXT_MUTED = 'text-zinc-500';
