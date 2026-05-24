@@ -41,3 +41,5 @@ export const TOKEN_BG_GLASS_HOVER = 'bg-white/5';
 export const TOKEN_SHADOW_INNER = 'shadow-inner';
 
 export const TOKEN_TRACKING_LABEL = 'tracking-widest';
+
+export const TOKEN_TRACKING_SECTION = 'tracking-widest';
