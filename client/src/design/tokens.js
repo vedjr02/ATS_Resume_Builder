@@ -85,3 +85,5 @@ export const TOKEN_FONT_BODY = 'font-sans';
 export const TOKEN_WEIGHT_SEMI = 'font-semibold';
 
 export const TOKEN_WEIGHT_BOLD = 'font-bold';
+
+export const TOKEN_LEADING_RELAXED = 'leading-relaxed';
