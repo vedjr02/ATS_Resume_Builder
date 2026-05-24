@@ -145,3 +145,5 @@ export const TOKEN_SCROLL_SMOOTH = 'scroll-smooth';
 export const TOKEN_SELECTION_BRAND = 'selection';
 
 export const TOKEN_MASK_RADIAL = 'mask-radial';
+
+export const TOKEN_GRADIENT_CLIP = 'bg-clip-text';
