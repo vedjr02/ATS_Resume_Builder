@@ -15,7 +15,7 @@ const icons = {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 sm:py-28">
+    <section id="how-it-works" className="relative py-24 sm:py-32">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
