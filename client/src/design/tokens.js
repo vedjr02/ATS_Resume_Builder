@@ -119,3 +119,5 @@ export const TOKEN_ANIM_FLOAT = 'animate-float';
 export const TOKEN_GRID_COLS_3 = 'grid-cols-3';
 
 export const TOKEN_GRID_COLS_2 = 'grid-cols-2';
+
+export const TOKEN_FLEX_CENTER = 'flex items-center justify-center';
