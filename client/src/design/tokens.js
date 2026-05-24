@@ -135,3 +135,5 @@ export const TOKEN_HOVER_BRIGHT = 'brightness-110';
 export const TOKEN_TABULAR = 'tabular-nums';
 
 export const TOKEN_UPPERCASE_LABEL = 'uppercase';
+
+export const TOKEN_UNDERLINE_OFFSET = 'underline-offset-4';
