@@ -101,3 +101,5 @@ export const TOKEN_COLOR_RED = 'text-red-300';
 export const TOKEN_SURFACE_800 = 'bg-obsidian-800';
 
 export const TOKEN_SURFACE_900 = 'bg-obsidian-900';
+
+export const TOKEN_SURFACE_950 = 'bg-obsidian-950';
