@@ -43,3 +43,5 @@ export const TOKEN_SHADOW_INNER = 'shadow-inner';
 export const TOKEN_TRACKING_LABEL = 'tracking-widest';
 
 export const TOKEN_TRACKING_SECTION = 'tracking-widest';
+
+export const TOKEN_GAP_SECTION = 'gap-8';
