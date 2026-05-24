@@ -13,7 +13,7 @@ export default function ErrorPanel({ error, onRetry, cooldownSec, isCoolingDown 
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold text-red-100">Something went wrong</h3>
+          <h3 className="text-lg font-semibold text-red-50">Something went wrong</h3>
           <p className="mt-3 text-sm leading-relaxed text-red-200/75">{error}</p>
           <div className="mt-6">
             <Button variant="secondary" onClick={onRetry} disabled={isCoolingDown}>
