@@ -143,3 +143,5 @@ export const TOKEN_DECORATION_MUTED = 'decoration-white/20';
 export const TOKEN_SCROLL_SMOOTH = 'scroll-smooth';
 
 export const TOKEN_SELECTION_BRAND = 'selection';
+
+export const TOKEN_MASK_RADIAL = 'mask-radial';
