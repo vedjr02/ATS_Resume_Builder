@@ -91,3 +91,5 @@ export const TOKEN_LEADING_RELAXED = 'leading-relaxed';
 export const TOKEN_LEADING_TIGHT = 'leading-tight';
 
 export const TOKEN_COLOR_BRAND_300 = 'text-brand-300';
+
+export const TOKEN_COLOR_EMERALD = 'text-emerald-300';
