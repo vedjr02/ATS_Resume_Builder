@@ -1,0 +1,11 @@
+/** Design tokens — refined incrementally for UI polish passes */
+
+export const SPACING = {
+  sectionY: 'py-24',
+  sectionYLarge: 'sm:py-32',
+};
+
+export const MOTION = {
+  default: 'duration-300',
+  slow: 'duration-500',
+};
