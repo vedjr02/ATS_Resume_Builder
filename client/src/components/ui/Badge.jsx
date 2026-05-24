@@ -7,7 +7,7 @@ export default function Badge({ children, variant = 'default' }) {
 
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium tracking-wide backdrop-blur-md ${styles[variant]}`}
+      className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium tracking-wider backdrop-blur-md ${styles[variant]}`}
     >
       {children}
     </span>
