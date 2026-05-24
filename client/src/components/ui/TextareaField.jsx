@@ -24,7 +24,7 @@ export default function TextareaField({
         </span>
       </div>
       <div className="relative">
-        <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-brand-500/0 via-brand-400/0 to-violet-500/0 opacity-0 blur-sm transition-all duration-500 group-focus-within/field:from-brand-500/20 group-focus-within/field:via-brand-400/10 group-focus-within/field:to-violet-500/20 group-focus-within/field:opacity-100" />
+        <div className="pointer-events-none absolute -inset-px rounded-[1.1rem] bg-gradient-to-br from-brand-500/0 via-brand-400/0 to-violet-500/0 opacity-0 blur-sm transition-all duration-500 group-focus-within/field:from-brand-500/20 group-focus-within/field:via-brand-400/10 group-focus-within/field:to-violet-500/20 group-focus-within/field:opacity-100" />
         <textarea
           id={id}
           value={value}
