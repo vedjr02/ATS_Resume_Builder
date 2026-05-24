@@ -19,7 +19,7 @@ function LogoMark() {
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-obsidian-950/70 backdrop-blur-2xl backdrop-saturate-150">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-8">
         <LogoMark />
         <div className="hidden items-center gap-8 md:flex">
           <a href="#how-it-works" className="text-sm font-medium text-zinc-400 transition hover:text-white">
