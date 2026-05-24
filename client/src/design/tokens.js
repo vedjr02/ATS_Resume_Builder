@@ -45,3 +45,5 @@ export const TOKEN_TRACKING_LABEL = 'tracking-widest';
 export const TOKEN_TRACKING_SECTION = 'tracking-widest';
 
 export const TOKEN_GAP_SECTION = 'gap-8';
+
+export const TOKEN_GAP_CARD = 'gap-6';
