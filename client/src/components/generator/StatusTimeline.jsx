@@ -17,7 +17,7 @@ export default function StatusTimeline({ statusStep }) {
           return (
             <div
               key={step}
-              className={`flex items-center gap-4 rounded-xl px-4 py-3 text-sm transition-all duration-500 ${
+              className={`flex items-center gap-3.5 rounded-xl px-4 py-3 text-sm transition-all duration-500 ${
                 isActive
                   ? 'border border-brand-400/20 bg-brand-500/10 text-brand-100'
                   : isDone
