@@ -129,3 +129,5 @@ export const TOKEN_POINTER_NONE = 'pointer-events-none';
 export const TOKEN_OVERFLOW_HIDDEN = 'overflow-hidden';
 
 export const TOKEN_TRANSITION_ALL = 'transition-all';
+
+export const TOKEN_HOVER_BRIGHT = 'brightness-110';
