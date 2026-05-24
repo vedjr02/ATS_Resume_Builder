@@ -67,3 +67,5 @@ export const TOKEN_DURATION_FAST = '150ms';
 export const TOKEN_DURATION_BASE = '300ms';
 
 export const TOKEN_DURATION_SLOW = '500ms';
+
+export const TOKEN_OPACITY_DISABLED = 'opacity-50';
