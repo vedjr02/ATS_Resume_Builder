@@ -4,7 +4,7 @@ export default function Features() {
   return (
     <section id="features" className="relative py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-white/[0.04] via-transparent to-brand-500/[0.04] p-8 sm:p-12">
+        <div className="overflow-hidden rounded-[2.25rem] border border-white/[0.08] bg-gradient-to-br from-white/[0.04] via-transparent to-brand-500/[0.04] p-8 sm:p-12">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mint-300/80">Why this works</p>
