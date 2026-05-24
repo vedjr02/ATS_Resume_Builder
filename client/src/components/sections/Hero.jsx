@@ -5,7 +5,7 @@ import { scrollToForm } from '../../lib/scroll.js';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-24 sm:pt-20 sm:pb-32">
+    <section className="relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
       <div className="hero-mesh pointer-events-none absolute inset-0" />
       <div className="hero-grid pointer-events-none absolute inset-0 opacity-40" />
       <div className="noise pointer-events-none absolute inset-0 opacity-[0.035]" />
