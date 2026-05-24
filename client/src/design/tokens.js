@@ -113,3 +113,5 @@ export const TOKEN_GLOW_LG = 'shadow-glow-lg';
 export const TOKEN_ANIM_FADE = 'animate-fade-up';
 
 export const TOKEN_ANIM_SPIN = 'animate-spin';
+
+export const TOKEN_ANIM_FLOAT = 'animate-float';
