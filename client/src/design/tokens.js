@@ -37,3 +37,5 @@ export const TOKEN_TEXT_PRIMARY = 'text-zinc-100';
 export const TOKEN_BG_GLASS = 'bg-white/3';
 
 export const TOKEN_BG_GLASS_HOVER = 'bg-white/5';
+
+export const TOKEN_SHADOW_INNER = 'shadow-inner';
