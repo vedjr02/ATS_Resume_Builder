@@ -63,3 +63,5 @@ export const TOKEN_GRADIENT_MINT = 'from-mint-300';
 export const TOKEN_EASE_OUT = 'cubic-bezier(0.16,1,0.3,1)';
 
 export const TOKEN_DURATION_FAST = '150ms';
+
+export const TOKEN_DURATION_BASE = '300ms';
