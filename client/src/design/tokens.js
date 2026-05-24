@@ -31,3 +31,5 @@ export const TOKEN_BORDER_STRONG = 'border-white/12';
 export const TOKEN_TEXT_MUTED = 'text-zinc-500';
 
 export const TOKEN_TEXT_SECONDARY = 'text-zinc-400';
+
+export const TOKEN_TEXT_PRIMARY = 'text-zinc-100';
