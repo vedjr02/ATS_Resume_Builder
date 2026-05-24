@@ -59,3 +59,5 @@ export const TOKEN_GRADIENT_BRAND = 'from-brand-500';
 export const TOKEN_GRADIENT_VIOLET = 'to-violet-400';
 
 export const TOKEN_GRADIENT_MINT = 'from-mint-300';
+
+export const TOKEN_EASE_OUT = 'cubic-bezier(0.16,1,0.3,1)';
