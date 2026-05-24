@@ -33,3 +33,5 @@ export const TOKEN_TEXT_MUTED = 'text-zinc-500';
 export const TOKEN_TEXT_SECONDARY = 'text-zinc-400';
 
 export const TOKEN_TEXT_PRIMARY = 'text-zinc-100';
+
+export const TOKEN_BG_GLASS = 'bg-white/3';
